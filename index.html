@@ -1,16 +1,40 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="pt-br">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução - Star Wars</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  Hello world
-  <script src="script.js"></script>
-</body>
+    <!-- Fundo estrelado -->
+    <div class="stars"></div>
 
+    <!-- Logo de Star Wars -->
+    <div class="logo">
+        <img src="./images/logo.svg" alt="Star Wars Logo">
+    </div>
+
+    <!-- Introdução estilo Star Wars -->
+    <div class="star-wars-intro">
+        <div class="crawl">
+            <div class="title">
+                <h1>A Força precisa de você...</h1>
+            </div>
+            <p>Em uma galáxia muito, muito distante...</p>
+            <p>Um servidor épico foi criado para unir jogadores que querem lutar pela Aliança Rebelde ou pelo Império Galáctico.</p>
+            <p>Escolha seu lado e venha explorar os limites do universo!</p>
+        </div>
+    </div>
+
+    <!-- Script colocado no final -->
+    <script>
+        // Redirecionar para o site externo após a animação (13 segundos)
+        window.onload = () => {
+            setTimeout(() => {
+                window.location.href = "https://gajjokj.github.io/starwarsitetema/"; // Redireciona para o link externo
+            }, 13000); // 13 segundos
+        };
+    </script>
+</body>
 </html>
