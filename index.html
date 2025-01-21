@@ -7,44 +7,53 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Fundo estrelado -->
     <div class="stars"></div>
 
-    <!-- Logo de Star Wars -->
     <div class="logo">
         <img src="./images/logo.svg" alt="Star Wars Logo">
     </div>
 
-    <!-- Introdução -->
     <div class="star-wars-intro">
         <div class="crawl">
             <div class="title">
                 <h1>A Força precisa de você...</h1>
-            </div>
+        </div>
             <p>Em uma galáxia muito, muito distante...</p>
             <p>Um servidor épico foi criado para unir jogadores que querem lutar pela Aliança Rebelde ou pelo Império Galáctico.</p>
             <p>Escolha seu lado e venha explorar os limites do universo!</p>
-            <p>Junte-se aos Padawans e aprenda os caminhos da Força enquanto trilha sua jornada épica!</p> 
-            <p>Prepare-se para grandes batalhas, onde sua decisão pode mudar o destino da galáxia!</p> 
+            <p>Os novos heróis, conhecidos como Padawans, devem se unir à luta e aprender os caminhos da Força.</p> 
+            <p>Prepare-se para trilhar sua jornada rumo à grandeza, onde cada decisão moldará o futuro da galáxia!</p> 
         </div>
     </div>
 
-
     <!-- Áudio -->
-    <audio id="audio" loop>
-        <source src="audio/Star Wars Intro HD 1080p.mp3" type="audio/mp3">
+    <audio id="audio" loop muted>
+        <source src="audio/Star%20Wars%20Intro%20HD%201080p.mp3" type="audio/mp3">
         Seu navegador não suporta o elemento de áudio.
     </audio>
 
-    <script>
-        window.onload = () => {
-            const audio = document.getElementById('audio');
-            audio.play(); // Inicia o áudio quando a página carrega
+    <!-- Imagem para desmutar -->
+     <div class="audio-control" id="audioControl">
+            <img src="images/audio.png" alt="Audio Icon" class="audio-icon">
+            <span>Aperte para ouvir o som</span>
+        </div>
 
+        <script>
+            let audio = document.getElementById('audio');
+
+           
+            document.getElementById('audioControl').addEventListener('click', function() {
+                // Desmuta o áudio e começa a tocar
+                audio.muted = false; 
+                audio.play();
+                // Oculta a imagem e o texto após o clique
+                document.getElementById('audioControl').style.display = 'none'; 
+            });
+
+            
             setTimeout(() => {
-                window.location.href = "https://gajjokj.github.io/starwarsitetema/";
-            }, 20000); // 20 segundos para redirecionar
-        };
-    </script>
-</body>
+                window.location.href = "https://gajjokj.github.io/starwarsitetema/"; 
+            }, 22000);
+        </script>
+    </body>
 </html>
