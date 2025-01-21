@@ -108,6 +108,45 @@ body, html {
     color: yellow;
 }
 
+@media (max-width: 768px) {
+    .logo img {
+        width: 200px; /* Reduzindo o tamanho da logo em telas menores */
+    }
+
+    .crawl p {
+        font-size: 1rem; /* Reduzindo o tamanho do texto */
+        margin: 0 5%; /* Ajustando a margem */
+    }
+
+    .star-wars-intro {
+        margin-top: 50px; /* Ajustando a margem para que o conteúdo fique centralizado */
+    }
+
+    .crawl {
+        width: 80%; /* Diminui a largura da animação para que se ajuste melhor */
+    }
+}
+
+/* Responsividade para telas muito pequenas (smartphones) */
+@media (max-width: 480px) {
+    .logo img {
+        width: 150px; /* Logo ainda menor em telas bem pequenas */
+    }
+
+    .crawl p {
+        font-size: 0.9rem; /* Menor ainda em telas pequenas */
+        margin: 0 3%; /* Ajustando mais a margem */
+    }
+
+    .star-wars-intro {
+        margin-top: 30px; /* Reduzindo a margem no topo */
+    }
+
+    .crawl {
+        width: 75%; /* Ainda mais estreito */
+    }
+}
+
 .audio-control {
     position: fixed;
     bottom: 10px;
