@@ -27,13 +27,20 @@
         </div>
     </div>
 
-    <!-- Script colocado no final -->
+    <!-- Áudio -->
+    <audio id="audio" loop>
+        <source src="audio/Star Wars Intro HD 1080p.mp3" type="audio/mp3">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+
     <script>
-        // Redirecionar para o site externo após a animação (13 segundos)
         window.onload = () => {
+            const audio = document.getElementById('audio');
+            audio.play(); // Inicia o áudio quando a página carrega
+
             setTimeout(() => {
-                window.location.href = "https://gajjokj.github.io/starwarsitetema/"; // Redireciona para o link externo
-            }, 13000); // 13 segundos
+                window.location.href = "https://gajjokj.github.io/starwarsitetema/";
+            }, 20000); // 20 segundos para redirecionar
         };
     </script>
 </body>
